@@ -31,10 +31,12 @@ export default function Lista(props: ListaProps) {
   return (
     <div
       className={`
-      flex w-3/5
+      relative flex w-3/5 items-start
     `}
     >
-      <ul className={`w-full list-none bg-white shadow-lg rounded-lg`}>
+      <ul
+        className={`absolute w-full -top-14 list-none bg-white shadow-lg rounded-lg`}
+      >
         {renderizarTarefas()}
         <ListaRodape tarefas={props.tarefas} mudou={props.mudou} />
       </ul>
