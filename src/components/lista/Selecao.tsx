@@ -11,7 +11,7 @@ export default function Selecao(props: SelecaoProps) {
     <div
       className={`flex justify-center items-center
     h-7 w-7 rounded-full cursor-pointer
-    border border-gray-400 ${gradiente}
+    border border-gray-400 ${gradiente} text-white
     `}
     >
       {props.valor ? 'x' : ''}

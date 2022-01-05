@@ -1,18 +1,22 @@
-import Tarefa from '../model/Tarefa'
-import tarefasIniciais from '../data/mock'
-import Selecao from '../components/lista/Selecao'
+import { useState } from 'react'
+import Lista from '../components/lista/Lista'
+import TarefasIniciais from '../data/mock'
 
 export default function Home() {
+  const [tarefas, setTarefas] = useState(TarefasIniciais)
   return (
     <div
       className={`
-    h-screen flex flex-col justify-center items-center 
-    text-white 
-    bg-gradient-to-tr from-gray-600 to-gray-900
+    h-screen flex flex-col justify-center items-center  
+    bg-gray-300
     `}
     >
-      <Selecao valor={true} />
-      <Selecao valor={false} />
+      <Lista
+        tarefas={tarefas}
+        mudou={novasTarefas => {
+          setTarefas(novasTarefas)
+        }}
+      />
     </div>
   )
 }
