@@ -31,7 +31,7 @@ export default function Lista(props: ListaProps) {
   return (
     <div
       className={`
-      relative flex w-3/5 items-start
+      relative flex w-4/5 sm:w-3/5 items-start
     `}
     >
       <ul
